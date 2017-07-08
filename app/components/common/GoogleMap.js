@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-//import GoogleMapReact from 'google-map-react';
 //add react-router stuff here
+import API from "../../utils/API"; //api mongo data
 
 class GoogleMapOrig extends Component {
 	render(){

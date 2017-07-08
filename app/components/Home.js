@@ -5,6 +5,11 @@ import HomeTable from "./common/HomeTable";
 //import API from "../utils/API";
 
 class Home extends Component {
+	//getpd() {
+    	//API.getpd().then((res) => {
+    		//this.setState({ pd: res.data });
+    	//});
+	//}
 	render(){
 		
 		return (
