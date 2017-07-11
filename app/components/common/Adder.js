@@ -48,15 +48,6 @@ class Adder extends Component {
 	}
 	//end handling input changes
 	handleButtonClick() {
-    	//const newpd = [this.state.username, 
-    		//this.state.goods, 
-    		//this.state.origin,
-    		//this.state.destination,
-    		//this.state.originCoord,
-    		//this.state.destinationCoord,
-    		//this.state.shippingCost,
-    		//this.state.shipFreqPWeek];
-    	//console.log(newpd);
     	console.log(this.state.username)
     	API.savepd(this.state.username,
     		this.state.goods,
