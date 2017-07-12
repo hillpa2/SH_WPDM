@@ -21,7 +21,7 @@ class UserTable extends Component {
     }
     deletepd(id){
     	console.log(id);
-    	API.deletepd(id).then(this.getpd);
+    	API.deletepd(id)
     }
     renderpd(){
         return this.state.pds.map(pd =>(
@@ -38,8 +38,8 @@ class UserTable extends Component {
                 	<button
                 		onClick={() => this.deletepd(pd._id)}
                 	>
-                	DELETE
-                	</button>
+                    DELL
+                    </button>
                 </th>
             </tr>
         ));

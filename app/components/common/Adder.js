@@ -48,7 +48,7 @@ class Adder extends Component {
 	}
 	//end handling input changes
 	handleButtonClick() {
-    	console.log(this.state.username)
+    	console.log(this.props.validUser)
     	API.savepd(this.state.username,
     		this.state.goods,
     		this.state.origin,

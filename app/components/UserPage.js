@@ -13,28 +13,38 @@ import UserTable from "./common/UserTable"
 
 class UserPage extends Component {
 	componentDidMount(){
-        var entryUser = prompt("ENTER YOUR USERNAME");
-        var entryPass = prompt("UNTER YOUR PASSWORD")
-    	if (entryUser === null, entryPass === null){
+        var validUser = ["USER1", "USER2", "USER3", "USER4"];
+        var validPass = ["PASS1", "PASS2", "PASS3", "PASS4"];
+
+        const entryUser = prompt("ENTER YOUR USERNAME");
+        const entryPass = prompt("UNTER YOUR PASSWORD")
+    	if (entryUser === null || entryPass === null){
         	location.reload();
     	}
-    	else if (entryUser === "", entryPass === ""){
+    	else if (entryUser === "" || entryPass === ""){
     		location.reload();
     	}
     	else {
-    		alert(entryUser+" "+entryPass);
+    		for (var x = 0; x < validUser.length; x++){
+    			if (validUser[x]===entryUser && validPass[x]===entryPass) {
+    				alert("SUCCESS: "+entryUser+" "+entryPass);
+    				render();
+    			}
+    		}
+    		location.reload();
     	}
     }
 	render(){	
 		return (
 			<div>
 				<UserLoginSearch
+					entryUser={this.entryUser}
 				/>
 				<Adder
-				/>
-				<Modifier
+					entryUser={this.entryUser}
 				/>
 				<UserTable
+					entryUser={this.entryUser}
 				/>
 			</div>
 		)
