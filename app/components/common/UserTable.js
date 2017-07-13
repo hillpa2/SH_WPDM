@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //add react-router stuff here
 import API from "../../utils/API"; //api mongo data
 
-//need to fix delete
+//the UserPage table with data, not sharred
 class UserTable extends Component {
 	constructor(){
         super();
@@ -37,6 +37,7 @@ class UserTable extends Component {
                 <th>
                 	<button
                 		onClick={() => this.deletepd(pd._id)}
+                        className="b-y"
                 	>
                     DEL
                     </button>
@@ -53,9 +54,9 @@ class UserTable extends Component {
     					<th>Goods Shiped</th>
     					<th>Origin</th>
     					<th>Destination</th>
-    					<th>Origin Coordinate</th> 
-    					<th>Destination Coordinate</th>
-    					<th>Shipment Cost</th>
+    					<th>Origin Coord.</th> 
+    					<th>Destination Coord.</th>
+    					<th>Ship. Cost</th>
     					<th>Ship. Freq. Per Week</th>
     					<th>DELETE</th>
 					</tr>

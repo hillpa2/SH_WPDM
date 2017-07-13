@@ -6,6 +6,7 @@ const API={
 		return axios.get("/api/pd");
 	},
 
+	//saves new pd
 	savepd: function(
 		username, 
 		goods, 
@@ -29,11 +30,10 @@ const API={
 		});
 	},
 	
+	//deletes specified pd
 	deletepd: function(id){
 		return axios.delete(`/api/pd/${id}`);
 	},
-
-	//add more here
 };
 
 export default API;

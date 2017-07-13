@@ -4,7 +4,7 @@ var express=require("express");
 var pdController=require("../controllers/pdController");
 var router=new express.Router();
 
-//getting and posting stuff from quotesController
+//getting and posting stuff from pdController
 router.get("/pd/:id?", pdController.index);
 router.post("/pd", pdController.create);
 router.patch("/pd/:id", pdController.update); //update

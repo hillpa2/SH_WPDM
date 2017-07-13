@@ -39,6 +39,9 @@ class UserPage extends Component {
 				<Adder
 					entryUser={this.entryUser}
 				/>
+                <UserLoginSearch
+                    
+                />
 				<UserTable
 					entryUser={this.entryUser}
 				/>

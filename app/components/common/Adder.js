@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //add react-router stuff here
 import API from "../../utils/API"; //api mongo data
 
+//this is on the UserPage where you add new data
 class Adder extends Component {
 	constructor() {
 		super();
@@ -47,8 +48,11 @@ class Adder extends Component {
 		this.setState({ shipFreqPWeek: event.target.value });
 	}
 	//end handling input changes
+	
+	//when button is pushed
 	handleButtonClick() {
     	console.log(this.props.validUser)
+    	//saving new data from text boxes
     	API.savepd(this.state.username,
     		this.state.goods,
     		this.state.origin,
@@ -58,8 +62,8 @@ class Adder extends Component {
     		this.state.shippingCost,
     		this.state.shipFreqPWeek
     	).then(this.props.getpd);
-    	//this.setState({ inputValue: "" });
 	}
+	//end when button is pushed start render()
 	render(){
 		return (
 			<div>
@@ -114,9 +118,12 @@ class Adder extends Component {
 					/>
         			<button
 		    			onClick={this.handleButtonClick}
+		    			className="b-y"
 					>
-						Submit
+						SUBMIT NEW DATA
 					</button>
+					Note if you push the submit button the data will be stored 
+					however you will need to refresh the page to see it.
 				</div>
 			</div>
 		);

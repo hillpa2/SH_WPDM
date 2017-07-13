@@ -1,7 +1,8 @@
 //from node
 var mongoose=require("mongoose");
 var Schema=mongoose.Schema;
-//creating schema
+
+//the pd schema
 var pdSchema= new Schema({
 	username: String,
 	goods: String,

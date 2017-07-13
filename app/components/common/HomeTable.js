@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //add react-router stuff here
 import API from "../../utils/API"; //api mongo data
 
+//the table with data on the homepage, is not sharred
 class HomeTable extends Component {
 	constructor(){
         super();
@@ -41,9 +42,9 @@ class HomeTable extends Component {
     					<th>Goods Shiped</th>
     					<th>Origin</th>
     					<th>Destination</th>
-    					<th>Origin Coordinate</th> 
-    					<th>Destination Coordinate</th>
-    					<th>Shipment Cost</th>
+    					<th>Origin Coord.</th> 
+    					<th>Destination Coord.</th>
+    					<th>Ship. Cost</th>
     					<th>Ship. Freq. Per Week</th>
 					</tr>
                     {this.renderpd()}
