@@ -27,7 +27,6 @@ class UserPage extends Component {
     	else {
     		for (var x = 0; x < validUser.length; x++){
     			if (validUser[x]===entryUser && validPass[x]===entryPass) {
-    				alert("SUCCESS: "+entryUser+" "+entryPass);
     				render();
     			}
     		}
@@ -37,9 +36,6 @@ class UserPage extends Component {
 	render(){	
 		return (
 			<div>
-				<UserLoginSearch
-					entryUser={this.entryUser}
-				/>
 				<Adder
 					entryUser={this.entryUser}
 				/>

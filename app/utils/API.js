@@ -30,7 +30,7 @@ const API={
 	},
 	
 	deletepd: function(id){
-		return axios.delete("/api/pd/${id}");
+		return axios.delete(`/api/pd/${id}`);
 	},
 
 	//add more here

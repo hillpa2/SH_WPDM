@@ -1,6 +1,6 @@
 
 body {
-background-color:tan;
+background-color:blue;
 color:yellow;
 font-family:Georgia;
 }
@@ -37,14 +37,14 @@ float:left;
 margin-right:25px;
 }
 .UP_INT {
-background-color:grey;
+background-color:black;
 width:100%;
 height:40px;
 float:left;
 margin-bottom:10px;
 }
 .UP_NAME {
-background-color:black;
+background-color:grey;
 height:40px;
 margin-left:50px;
 float:left;

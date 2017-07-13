@@ -3,7 +3,6 @@ var mongoose=require("mongoose");
 var Schema=mongoose.Schema;
 //creating schema
 var pdSchema= new Schema({
-	//text: String,
 	username: String,
 	goods: String,
 	origin: String,
