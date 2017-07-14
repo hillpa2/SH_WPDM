@@ -7,9 +7,9 @@ class UserLoginSearch extends Component {
 	constructor() {
 		super();
 		this.state = {
-		inputValue: "",
-		spds: []
-	};
+			inputValue: "",
+			spds: []
+		};
 		// Binding handleInputChange and handleButtonClick since we'll be passing them as
 		// callbacks and 'this' will change otherwise
 		this.handleInputChangeUsername = this.handleInputChangeUsername.bind(this);
@@ -21,7 +21,7 @@ class UserLoginSearch extends Component {
 		this.handleInputChangeShippingCost = this.handleInputChangeShippingCost.bind(this);
 		this.handleInputChangeShipFreqPWeek = this.handleInputChangeShipFreqPWeek.bind(this);
 		
-		//this.handleButtonClick = this.handleButtonClick.bind(this);
+		this.getspds = this.getspds.bind(this);
 	}
 	//handling the input changes
 	handleInputChangeUsername(event) {
@@ -50,15 +50,40 @@ class UserLoginSearch extends Component {
 	}
 	//end handling input changes
 
-	//when the search button is pushed
-	whenButtonPushed() {
+	getspds() {
 		API.getpd().then((res) => {
+            //var testspds= res.data;
+            //console.log(testspds);
             this.setState({spds: res.data});
-            console.log(spds);
+            console.log(this.state.spds);
+            for (var x = 0; x < this.state.spds.length; x++){
+            	if (this.state.spds[x].username===this.state.username || 
+            		this.state.spds[x].goods===this.state.goods || 
+            		this.state.spds[x].origin===this.state.origin ||
+            		this.state.spds[x].destination===this.state.destination ||
+            		this.state.spds[x].originCoord===this.state.originCoord ||
+            		this.state.spds[x].destinationCoord===this.state.destinationCoord ||
+            		this.state.spds[x].shippingCost===this.state.shippingCost ||
+            		this.state.spds[x].shipFreqPWeek===this.state.shipFreqPWeek)
+            	{	
+            		alert("RESULT AT ROW #"+(x+1)+": "+
+            			this.state.spds[x].username+"| "+
+            			this.state.spds[x].goods+"| "+
+            			this.state.spds[x].origin+"| "+
+            			this.state.spds[x].destination+"| "+
+            			this.state.spds[x].originCoord+"| "+
+            			this.state.spds[x].destinationCoord+"| "+
+            			this.state.spds[x].shippingCost+"| "+
+            			this.state.spds[x].shipFreqPWeek+"| "
+            			)
+            	}
+            }
         });
 	}
+
+	//temporarily unused
 	renderSearchpds() {
-		return this.state.spds.map(pd =>(
+		return this.spds.map(pd =>(
 			<tr>
                 <th>{pd.username}</th>
                 <th>{pd.goods}</th>
@@ -78,6 +103,7 @@ class UserLoginSearch extends Component {
             </tr>
 		));
 	}
+	//end temporarily unused
 
 	render(){
 		return (
@@ -133,10 +159,11 @@ class UserLoginSearch extends Component {
 					/>
         			<button
 		    			className="b-y"
-		    			onClick={this.whenButtonPushed}
+		    			onClick={this.getspds}
 					>
 						SEARCH THREW CURRENT DATA
 					</button>	
+					{this.renderSearchpds}
 				</div>
 			</div>
 		);
