@@ -36,7 +36,7 @@ class HomeTable extends Component {
     render(){
 		return (
 			<div>
-                <table className="FULLH b-y">
+                <table className="FULL10 g-y">
   					<tr>
     					<th>Username</th>
     					<th>Goods Shiped</th>

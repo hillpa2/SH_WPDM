@@ -37,7 +37,7 @@ class UserTable extends Component {
                 <th>
                 	<button
                 		onClick={() => this.deletepd(pd._id)}
-                        className="b-y"
+                        className="w-b"
                 	>
                     DEL
                     </button>
@@ -48,7 +48,7 @@ class UserTable extends Component {
 	render(){
 		return (
 			<div>
-                <table className="FULLU b-y">
+                <table className="FULL10 g-y">
   					<tr>
     					<th>Username</th>
     					<th>Goods Shiped</th>

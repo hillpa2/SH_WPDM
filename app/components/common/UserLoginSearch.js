@@ -108,7 +108,7 @@ class UserLoginSearch extends Component {
 	render(){
 		return (
 			<div>
-				<div className="FULLU b-y">
+				<div className="FULL10 g-y">
 					<textarea
 						placeholder="USERNAME"
 						value={this.state.username}
@@ -158,7 +158,7 @@ class UserLoginSearch extends Component {
 						rows="1"
 					/>
         			<button
-		    			className="b-y"
+		    			className="w-b"
 		    			onClick={this.getspds}
 					>
 						SEARCH THREW CURRENT DATA

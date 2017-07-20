@@ -67,7 +67,7 @@ class Adder extends Component {
 	render(){
 		return (
 			<div>
-				<div className="FULLU b-y">
+				<div className="FULL10 g-y">
 					<textarea
 						placeholder="USERNAME"
 						value={this.state.username}
@@ -118,7 +118,7 @@ class Adder extends Component {
 					/>
         			<button
 		    			onClick={this.handleButtonClick}
-		    			className="b-y"
+		    			className="w-b"
 					>
 						SUBMIT NEW DATA
 					</button>

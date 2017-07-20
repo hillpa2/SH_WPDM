@@ -8,7 +8,7 @@ class GoogleMapOrig extends Component {
 	render(){
 		return (
 			<div>
-				<div id="mapid"></div>
+				<div id="mapid" className="width1 height1 left"></div>
 			</div>
 		);
 	}

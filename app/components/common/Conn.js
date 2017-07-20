@@ -29,9 +29,11 @@ class Conn extends Component {
 
 	render() {
     	return (
-    		<div className="CONN b-y">
-    		Samuel Hill World Production and Distribution Monitor: Email to maybe become user
-    		<form onSubmit={this.handleSubmit} action="https://formspree.io/samuelhill.samuelhill@ghill.com"
+    		<div className="right g-y">
+    		<p>Samuel Hill World Production and Distribution Monitor:</p>
+            <p>Email to maybe become user</p>
+    		
+            <form onSubmit={this.handleSubmit} action="https://formspree.io/samuelhill.samuelhill@ghill.com"
 			method="POST">
         		<label>
         		Name:

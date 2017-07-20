@@ -40,7 +40,6 @@ class UserPage extends Component {
 					entryUser={this.entryUser}
 				/>
                 <UserLoginSearch
-                    
                 />
 				<UserTable
 					entryUser={this.entryUser}
